@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color:blueviolet;
+    text-align: center;
+}
+p {
+    text-align: justify;
+}
+body {
+    background-color: burlywood;
+}
+.movie_title {
+    font-style: oblique;
+    color: darkblue;
+}
+.movie_description {
+    font-style: italic;
+}
+.personal_comments {
+    font-size: small;
+}
+.border_box {
+    border: 2px solid red;
+    border-radius: 5px 15px;
+}

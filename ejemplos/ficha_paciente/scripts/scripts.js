@@ -21,7 +21,7 @@ function guardarFormulario() {
         hallazgos: hallazgos,
         tratamiento: tratamiento
     }
-    ficha.consultas[ficha.consultas] = consulta;
+    ficha.consultas[ficha.consultas.length] = consulta;
     ficha.proximoControl = proximoControl;
     console.log(ficha);
 }

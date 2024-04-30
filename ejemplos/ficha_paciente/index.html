@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/scripts.js"></script>
+    </head>
+    <body>
+        <h1>Ficha de Paciente</h1>
+        <div id="formulario">
+            <div>
+                <label for="nombres">Nombres</label>
+                <input type="text" id="nombres" name="nombres"/>
+            </div>
+            <div>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos"/>
+            </div>
+            <div>
+                <label for="edad">Edad</label>
+                <input type="text" id="edad" name="edad"/>
+            </div>
+            <div>
+                <label for="hallazgos">Hallazgos</label>
+                <textarea id="hallazgos" name="hallazgos"></textarea>
+            </div>
+            <div>
+                <label for="tratamiento">Tratamiento</label>
+                <textarea id="tratamiento" name="tratamiento"></textarea>
+            </div>
+            <div>
+                <label for="fecha">Próximo Control</label>
+                <input type="text" id="fecha" name="fecha"/>
+            </div>
+            <div>
+                <button type="button" onclick="guardarFormulario()">Guardar</button>
+            </div>
+        </div>
+    </body>
+</html>

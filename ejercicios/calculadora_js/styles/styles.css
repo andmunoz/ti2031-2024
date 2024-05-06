@@ -1,0 +1,44 @@
+.container {
+    margin: 20px;
+}
+
+.calculator {
+    background: #BBB;
+    border: 5px solid;
+    border-color: #555;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+.screen {
+    width: 100%;
+    font-family: monospace;
+}
+
+.button {
+    color: #BBB;
+    background-color: black;
+    height: 30px;
+}
+
+.equals {
+    width: 30px;
+    background-color: green;
+}
+
+.clear {
+    width: 30px;
+    background-color: red;
+}
+
+.basic {
+    width: 30px;
+}
+
+.advanced {
+    width: 50px;
+}

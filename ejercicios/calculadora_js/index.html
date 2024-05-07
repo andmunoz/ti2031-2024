@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora JS</title>
+    <script lang="text/javascript" src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="styles/styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <table class="calculator">
+            <tbody>
+                <tr>
+                    <td colspan="6"><input class="screen" type="text" id="pantalla"/></td>
+                </tr>
+                <tr>
+                    <td><button class="button basic" onclick="escribirNumero(7)">7</button></td>
+                    <td><button class="button basic" onclick="escribirNumero(8)">8</button></td>
+                    <td><button class="button basic" onclick="escribirNumero(9)">9</button></td>
+                    <td><button class="button basic" onclick="operadorBinario('+')">+</button></td>
+                    <td><button class="button advanced" onclick="operadorUnario('-x')">-x</button></td>
+                    <td><button class="button advanced" onclick="operadorBinario('2^')">2<sup>x</sup></button></td>
+                </tr>
+                <tr>
+                    <td><button class="button basic" onclick="escribirNumero(4)">4</button></td>
+                    <td><button class="button basic" onclick="escribirNumero(5)">5</button></td>
+                    <td><button class="button basic" onclick="escribirNumero(6)">6</button></td>
+                    <td><button class="button basic" onclick="operadorBinario('-')">-</button></td>
+                    <td><button class="button advanced" onclick="operadorUnario('1/x')"><sup>1</sup>/<sub>x</sub></button></td>
+                    <td><button class="button advanced" onclick="operadorBinario('^')">x<sup>n</sup></button></td>
+                </tr>
+                <tr>
+                    <td><button class="button basic" onclick="escribirNumero(1)">1</button></td>
+                    <td><button class="button basic" onclick="escribirNumero(2)">2</button></td>
+                    <td><button class="button basic" onclick="escribirNumero(3)">3</button></td>
+                    <td><button class="button basic" onclick="operadorBinario('*')">*</button></td>
+                    <td><button class="button advanced" onclick="operadorBinario('^2')">x<sup>2</sup></button></td>
+                    <td><button class="button advanced" onclick="operadorUnario('x!')">x!</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button clear" onclick="operadorUnario('C')">C</button></td>
+                    <td><button class="button basic" onclick="escribirNumero(0)">0</button></td>
+                    <td><button class="button equals" onclick="operadorBinario('=')">=</button></td>
+                    <td><button class="button basic" onclick="operadorBinario('/')">/</button></td>
+                    <td><button class="button advanced" onclick="operadorUnario('sqrt(x)')">&radic;x</button></td>
+                    <td><button class="button advanced" onclick="operadorUnario('log(x)')">log<sub>10</sub>x</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -15,7 +15,7 @@ th, td {
 }
 
 .screen {
-    width: 100%;
+    width: 95%;
     font-family: monospace;
 }
 
@@ -41,4 +41,8 @@ th, td {
 
 .advanced {
     width: 50px;
+}
+
+sub, sup {
+    font-size: xx-small;
 }

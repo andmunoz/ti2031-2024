@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Formulario de Ejemplo</title>
+        <script src="scripts/form.js"></script>
+    </head>
+    <body>
+        <div id="form">
+            <form id="call2action" onsubmit="return sendForm(this);">
+                <div>
+                    <span><label for="form_name">Tu nombre:</label></span>
+                    <span><input type="text" id="form_name" name="form_name"/></span>
+                </div>
+                <div>
+                    <span><label for="form_email">Tu e-mail:</label></span>
+                    <span><input type="text" id="form_email" name="form_email"/></span>
+                </div>
+                <div>
+                    <span><label for="form_game">Me gusta jugar:</label></span>
+                    <span>
+                        <select id="form_game" name="form_game">
+                            <option value="">Selecciona el tipo de juego</option>
+                            <option value="de Cartas">Juegos de Cartas</option>
+                            <option value="Cooperativos">Juegos Cooperativos</option>
+                            <option value="Temáticos">Juegos Temáticos</option>
+                            <option value="de Estrategia">Juegos de Estrategia</option>
+                            <option value="de Aventura">Juegos de Aventura</option>
+                            <option value="de Acertijos">Juegos de Acertijos</option>
+                            <option value="Tradicionales">Juegos Tradicionales</option>
+                            <option value="de Rol">Juegos de Rol</option>
+                        </select>
+                    </span>
+                </div>
+                <div>
+                    <span><button type="submit" name="submit">Enviar</button></span>
+                </div>
+            </form>    
+        </div>
+        <div id="gift" style="display: none;">
+            <p>
+                Gracias por enviarnos tus datos, <span id="contact_name" style="font-weight: bold;"></span>. 
+                Notamos que te apasionan los Juegos <span id="contact_game" style="font-weight: bold;"></span>. 
+                Nos contactaremos contigo a la brevedad usando tu dirección <span id="contact_email" style="font-weight: bold;"></span>.
+            </p>
+            <p>
+                Y no olvides que tenemos para tí un regalo por tu interés: 
+            </p>
+            <h2>
+                <a href="https://quejuegosdemesa.com/instrucciones/" target="_blank">
+                    Descarga aquí instrucciones de juegos de mesa
+                </a>
+            </h2>
+        </div>
+    </body>
+</html>

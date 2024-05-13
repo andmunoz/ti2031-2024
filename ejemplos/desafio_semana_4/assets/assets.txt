@@ -1,0 +1,1 @@
+/* Aquí val los archivos gráficos como imágenes */

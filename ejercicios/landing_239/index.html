@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/form.js"></script>
+</head>
+<body >
+    <!-- Logo de inacap -->
+    <div class="header">
+        <img src="images/Inacaplogo.png" alt="inacap Logo" width="7.5%" height="7.5%">
+    </div>
+
+    <!--Imagen de centro con letras-->
+    <div class="inicio_imagen">
+        <div class="titulo">
+            <h1>Te espera una gran aventura...</h1>
+            <h1> ¿Te atreves a entrar? </h1>
+        </div>
+    </div>
+
+
+    <div>
+        <h2>Te presentamos INACAPLUDI </h2>
+        <p class="parrafos">El club oficial de juegos de mesa y de rol de INACAP, autorizado por la DAE a nivel nacional.</br> Nos dedicamos a reunir a estudiantes y entusiastas de todas las sedes para compartir nuestra pasión por los juegos, la estrategia y la creatividad.
+        </p>
+    </div>
+
+    <div class="bloque_texto">
+        <img class="image2" src="images/juegos.avif" alt ="Juegos" width="24%">
+        <h3>Dentro de nuestras actividades principales, contamos con:  </br></h3>
+    
+                <ul class="parrafo_derecho">
+                <li>Espacios en cada una de las sedes para realizar partidas, de cualquier tipo de juego, en horarios hábiles.</li>
+                <li>Ludoteca, lugar donde hemos podido reunir diferentes juegos y libros, que cada socio puede solicitar para usarse en la sede.</li>
+                <li>Eventos por sede en donde podemos reunirnos como club y poder jugar libremente (durante una jornada extraprogramática). </li>
+                <li>Eventos inter-sedes, ya sea regionales o nacionales, en donde contamos con la participación de cada uno de los clubes (un evento al año que comienza el viernes y termina el sábado por la noche). </li>
+                <li>Charlas y talleres para toda la comunidad inacapina para que nos conozcan y aprendan estas prácticas sociales. </li>
+
+                </ul>
+
+
+    </div>
+
+
+        <div class="inicio_imagen2">
+            <div class="titulo">
+                <h1>¿Quieres saber más?</h1>
+            </div>
+        </div>
+
+        <div class="bloque_texto2">
+            <p class="parrafos_claros">Unirse al club tiene distintos beneficios, tales como 5 partidas gratuitas de prueba de distintos juegos de mesa que tenemos. </br>¡Descubre más sobre nuestro club! </p>
+            <img class="image1"src="https://hasbulbrothers.com/wp-content/uploads/2023/05/Arrows-3-pointing-down-arrow-down-animated.gif" alt="arrow down">
+        </div>
+    
+ 
+        <div class="bloque_texto2">
+            <div id="form" style="text-align: center;";>
+                <form id="call2action" onsubmit="return sendForm(this);">
+                    <div class="form-input">
+                        <span><label for="form_name">Tu nombre:</label></span>
+                        <span><input type="text" id="form_name" name="form_name"/></span>
+                    </div>
+                    <div class="form-input">
+                        <span><label for="form_email">Tu e-mail:</label></span>
+                        <span><input type="text" id="form_email" name="form_email"/></span>
+                    </div>
+                    <div class="form-input">
+                        <span><label for="form_game">Me gusta jugar:</label></span>
+                        <span>
+                            <select id="form_game" name="form_game">
+                                <option value="">Selecciona el tipo de juego</option>
+                                <option value="de Cartas">Juegos de Cartas</option>
+                                <option value="Cooperativos">Juegos Cooperativos</option>
+                                <option value="Temáticos">Juegos Temáticos</option>
+                                <option value="de Estrategia">Juegos de Estrategia</option>
+                                <option value="de Aventura">Juegos de Aventura</option>
+                                <option value="de Acertijos">Juegos de Acertijos</option>
+                                <option value="Tradicionales">Juegos Tradicionales</option>
+                                <option value="de Rol">Juegos de Rol</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="form-input">
+                        <span><button type="submit" name="submit">Enviar</button></span>
+                    </div>
+                </form>    
+            </div>
+            <div id="gift" style="display: none;">
+                <p>
+                    Gracias por enviarnos tus datos, <span id="contact_name" style="font-weight: bold;"></span>. 
+                    Notamos que te apasionan los Juegos <span id="contact_game" style="font-weight: bold;"></span>. 
+                    Nos contactaremos contigo a la brevedad usando tu dirección <span id="contact_email" style="font-weight: bold;"></span>.
+                </p>
+                <p>
+                    Y no olvides que tenemos para tí un regalo por tu interés: 
+                </p>
+                <h2>
+                    <a href="https://quejuegosdemesa.com/instrucciones/" target="_blank">
+                        Descarga aquí instrucciones de juegos de mesa
+                    </a>
+                </h2>
+        </div>
+</body>
+</html>
+
+</div>

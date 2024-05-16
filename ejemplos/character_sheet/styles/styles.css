@@ -1,0 +1,36 @@
+/* Aquí agregaremos la hoja de estilos */
+body {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+}
+
+.container {
+    width: auto;
+    border-width: 5px;
+    border-style: solid;
+    padding: 20px;
+    margin: 20px 10px;
+    background-color: darkgray;
+    border-color: lightgray;
+    text-align: center;
+}
+
+.logo {
+    height: 100px;
+}
+
+span {
+    padding: 0px 10px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

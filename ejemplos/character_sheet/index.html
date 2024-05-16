@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Hoja de Personaje</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&family=Poetsen+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css"/>
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div id="title" class="container">
+            <img src="assets/d20_lightred.png" class="logo" alt="Logo"/>
+            <h1>Hoja de Personaje</h1>
+        </div>
+        <div id="form" class="container">
+            <form>
+                <span>
+                    <label for="key">Atributo: </label>
+                    <input type="text" id="key" size="30" placeholder="Nombre del atributo" required/>
+                </span>
+                <span>
+                    <label for="value">Valor: </label>
+                    <input type="text" id="value" size="30" placeholder="Valor para el atributo" required/>
+                </span>
+                <span>
+                    <button type="submit" onclick="agregarAtributo('key', 'value'); return false;">Agregar</button>
+                </span>
+            </form>
+        </div>
+        <div id="sheet" class="container"></div>
+    </body>
+</html>

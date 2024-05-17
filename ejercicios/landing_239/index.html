@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/form.js"></script>
-</head>
-<body >
-    <!-- Logo de inacap -->
-    <div class="header">
-        <img src="images/Inacaplogo.png" alt="inacap Logo" width="7.5%" height="7.5%">
-    </div>
-
-    <!--Imagen de centro con letras-->
-    <div class="inicio_imagen">
-        <div class="titulo">
-            <h1>Te espera una gran aventura...</h1>
-            <h1> ¿Te atreves a entrar? </h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/form.js"></script>
+    </head>
+    <body >
+        <!-- Logo de inacap -->
+        <div class="header">
+            <img src="images/Inacaplogo.png" alt="inacap Logo" width="7.5%" height="7.5%">
         </div>
-    </div>
+
+        <!--Imagen de centro con letras-->
+        <div class="inicio_imagen">
+            <div class="titulo">
+                <h1>Te espera una gran aventura...</h1>
+                <h1> ¿Te atreves a entrar? </h1>
+            </div>
+        </div>
 
 
-    <div>
-        <h2>Te presentamos INACAPLUDI </h2>
-        <p class="parrafos">El club oficial de juegos de mesa y de rol de INACAP, autorizado por la DAE a nivel nacional.</br> Nos dedicamos a reunir a estudiantes y entusiastas de todas las sedes para compartir nuestra pasión por los juegos, la estrategia y la creatividad.
-        </p>
-    </div>
+        <div>
+            <h2>Te presentamos INACAPLUDI </h2>
+            <p class="parrafos">El club oficial de juegos de mesa y de rol de INACAP, autorizado por la DAE a nivel nacional.</br> Nos dedicamos a reunir a estudiantes y entusiastas de todas las sedes para compartir nuestra pasión por los juegos, la estrategia y la creatividad.
+            </p>
+        </div>
 
-    <div class="bloque_texto">
-        <img class="image2" src="images/juegos.avif" alt ="Juegos" width="24%">
-        <h3>Dentro de nuestras actividades principales, contamos con:  </br></h3>
+        <div class="bloque_texto">
+            <img class="image2" src="images/juegos.avif" alt ="Juegos" width="24%">
+            <h3>Dentro de nuestras actividades principales, contamos con:  </br></h3>
     
                 <ul class="parrafo_derecho">
-                <li>Espacios en cada una de las sedes para realizar partidas, de cualquier tipo de juego, en horarios hábiles.</li>
-                <li>Ludoteca, lugar donde hemos podido reunir diferentes juegos y libros, que cada socio puede solicitar para usarse en la sede.</li>
-                <li>Eventos por sede en donde podemos reunirnos como club y poder jugar libremente (durante una jornada extraprogramática). </li>
-                <li>Eventos inter-sedes, ya sea regionales o nacionales, en donde contamos con la participación de cada uno de los clubes (un evento al año que comienza el viernes y termina el sábado por la noche). </li>
-                <li>Charlas y talleres para toda la comunidad inacapina para que nos conozcan y aprendan estas prácticas sociales. </li>
-
+                    <li>Espacios en cada una de las sedes para realizar partidas, de cualquier tipo de juego, en horarios hábiles.</li>
+                    <li>Ludoteca, lugar donde hemos podido reunir diferentes juegos y libros, que cada socio puede solicitar para usarse en la sede.</li>
+                    <li>Eventos por sede en donde podemos reunirnos como club y poder jugar libremente (durante una jornada extraprogramática). </li>
+                    <li>Eventos inter-sedes, ya sea regionales o nacionales, en donde contamos con la participación de cada uno de los clubes (un evento al año que comienza el viernes y termina el sábado por la noche). </li>
+                    <li>Charlas y talleres para toda la comunidad inacapina para que nos conozcan y aprendan estas prácticas sociales. </li>
                 </ul>
-
-
-    </div>
-
+        </div>
 
         <div class="inicio_imagen2">
             <div class="titulo">
@@ -55,8 +51,7 @@
             <p class="parrafos_claros">Unirse al club tiene distintos beneficios, tales como 5 partidas gratuitas de prueba de distintos juegos de mesa que tenemos. </br>¡Descubre más sobre nuestro club! </p>
             <img class="image1"src="https://hasbulbrothers.com/wp-content/uploads/2023/05/Arrows-3-pointing-down-arrow-down-animated.gif" alt="arrow down">
         </div>
-    
- 
+     
         <div class="bloque_texto2">
             <div id="form" style="text-align: center;";>
                 <form id="call2action" onsubmit="return sendForm(this);">
@@ -103,8 +98,22 @@
                         Descarga aquí instrucciones de juegos de mesa
                     </a>
                 </h2>
-        </div>
-</body>
-</html>
+                <button type="button" onclick="reload()">Volver</button>
+            </div>
+        </div> 
 
-</div>
+        <div class="bloque_texto2">
+            <h2>Registrados</h2>
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Preferencia</th>
+                    <th>&nbsp;</th>
+                </thead>
+                <tbody id="body">
+                </tbody>
+            </table>            
+        </div>
+    </body>
+</html>

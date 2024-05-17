@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a INACAPLudi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/form.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/principal.jpg" alt="Logo de INACAPLudi">
+        <div class="header-content">
+            <img src="assets/inacap.png" alt="Logo de INACAP" class="header-logo">
+            <h1>Descubre el Mundo del Juego en INACAPLudi</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Explora Nuestros Eventos y Actividades</h1>
+            <h3>Participa en eventos locales y nacionales, disfruta de nuestra ludoteca y aprende con nuestros talleres.</h3>
+        </section>
+        <section class="info-boxes">
+            <div class="info-box" style="background-color: orange;"> 
+                <h2>JUEGA EN TU SEDE</h2>
+                <p>Espacios en cada una de las sedes para realizar partidas, de cualquier tipo de juego, en horarios hábiles.</p>
+                
+            </div>
+            <div class="info-box" style="background-color: grey;">
+                <h2>TENEMOS LUDOTECA</h2>
+                <p>Ludoteca, lugar donde hemos podido reunir diferentes juegos y libros, que cada socio puede solicitar para usarse en la sede.</p>
+                
+            </div>
+            <div class="info-box" style="background-color: red;"> 
+                <h2>EVENTOS</h2>
+                <p>Eventos por sede en donde podemos reunirnos como club y poder jugar libremente durante una jornada extraprogramática. </p>
+                
+            </div>
+            <div class="info-box" style="background-color: purple;"> 
+                <h2>INTER-SEDES</h2>
+                <p>Eventos inter-sedes, ya sea regionales o nacionales, en donde contamos con la participación de cada uno de los clubes (un evento al año que comienza el viernes y termina el sábado por la noche). </p>
+                
+            </div>
+            <div class="info-box" style="background-color: black;"> 
+                <h2>CHARLAS Y TALLERES</h2>
+                <p>Charlas y talleres para toda la comunidad inacapina para que nos conozcan y aprendan estas prácticas sociales. </p>                
+            </div>
+        </section>
+        <div id="form">
+                <form id="call2action" onsubmit="return sendForm(this);">
+                <div>
+                    <span><label for="form_name">Tu nombre:</label></span>
+                    <span><input type="text" id="form_name" name="form_name"/></span>
+                </div>
+                <div>
+                    <span><label for="form_email">Tu e-mail:</label></span>
+                    <span><input type="text" id="form_email" name="form_email"/></span>
+                </div>
+                <div>
+                    <span><label for="form_game">Me gusta jugar:</label></span>
+                    <span>
+                        <select id="form_game" name="sform_game">
+                            <option value="">Selecciona el tipo de juego</option>
+                            <option value="de Cartas">Juegos de Cartas</option>
+                            <option value="Cooperativos">Juegos Cooperativos</option>
+                            <option value="Temáticos">Juegos Temáticos</option>
+                            <option value="de Estrategia">Juegos de Estrategia</option>
+                            <option value="de Aventura">Juegos de Aventura</option>
+                            <option value="de Acertijos">Juegos de Acertijos</option>
+                            <option value="Tradicionales">Juegos Tradicionales</option>
+                            <option value="de Rol">Juegos de Rol</option>
+                        </select>
+                    </span>
+                </div>
+                <div>
+                    <span><button type="submit" name="submit">Enviar</button></span>
+                </div>
+            </form>    
+        </div>
+        <div id="gift" style="display: none;">
+            <p>
+                Gracias por enviarnos tus datos, <span id="contact_name" style="font-weight: bold;"></span>. 
+                Notamos que te apasionan los Juegos <span id="contact_game" style="font-weight: bold;"></span>. 
+                Nos contactaremos contigo a la brevedad usando tu dirección <span id="contact_email" style="font-weight: bold;"></span>.
+            </p>
+            <p>
+                Y no olvides que tenemos para tí un regalo por tu interés: 
+            </p>
+            <h4>
+                <a href="https://quejuegosdemesa.com/instrucciones/" target="_blank">
+                    Descarga aquí instrucciones de juegos de mesa
+                </a>
+            </h4>
+        </div>
+        <div id="registry">
+            <h3>Candidatos Registrados</h3>
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Preferencia</th>
+                    <th>&nbsp;</th>
+                </thead>
+                <tbody id="body">
+                    <td colspan="4">
+                        <b>No hay candidatos registrados</b>
+                    </td>
+                </tbody>
+            </table>            
+        </div>    
+    </div>
+</main>
+    <footer> 
+        <p>© 2024 INACAPLudi. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

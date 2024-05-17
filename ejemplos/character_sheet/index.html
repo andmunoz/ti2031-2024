@@ -17,7 +17,7 @@
             <h1>Hoja de Personaje</h1>
         </div>
         <div id="form" class="container">
-            <form>
+            <form onsubmit="return false">
                 <span>
                     <label for="key">Atributo: </label>
                     <input type="text" id="key" size="30" placeholder="Nombre del atributo" required/>
@@ -27,10 +27,18 @@
                     <input type="text" id="value" size="30" placeholder="Valor para el atributo" required/>
                 </span>
                 <span>
-                    <button type="submit" onclick="agregarAtributo('key', 'value'); return false;">Agregar</button>
+                    <button type="submit" onclick="agregarAtributo('key', 'value');">Agregar</button>
                 </span>
             </form>
         </div>
-        <div id="sheet" class="container"></div>
+        <div id="sheet" class="container">
+            <table>
+                <thead>
+                    <th>Atributo</th>
+                    <th>Valor</th>
+                </thead>
+                <tbody id="body"></tbody>
+            </table>
+        </div>
     </body>
 </html>

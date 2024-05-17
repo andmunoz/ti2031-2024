@@ -33,7 +33,7 @@ function sendForm(form) {
         mostrar: function(pos) {
             return '<tr>' + 
                       '<td>' + this.nombre + '</td>' + 
-                      '<td>' + this.email + '</td>' + 
+                      '<td><a href="mailto:' + this.email + '">' + this.email + '</a></td>' + 
                       '<td>Juegos ' + this.juego + '</td>' + 
                       '<td><button onclick="remove(' + pos + ')">Eliminar</button></td>' + 
                    '</tr>';
@@ -54,7 +54,7 @@ function sendForm(form) {
 }
 
 function remove(pos) {
-    console.log('Eliminar ' + pos);
+    if (!window.confirm('¿Está seguro de eliminar el prospecto?'));
 
     // Eliminamos del arreglo la posición indicada
     prospectos.splice(pos, 1);

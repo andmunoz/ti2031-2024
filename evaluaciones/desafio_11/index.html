@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Registro de Notas</title>
+        <meta name="description" content="Registro de Notas" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <script src="scripts/scripts.js"></script>
+    </head>
+    <body>
+        <div id="title" class="container">
+            <header>
+                <h1>
+                    <img src="assets/notas.gif" alt="Decorativa" class="logo" />
+                    Registro de Notas
+                    <img src="assets/notas.gif" alt="Decorativa" class="logo" />
+                </h1>    
+            </header>
+        </div>
+        <div id="content" class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del Estudiante</th>
+                        <th>P1</th>
+                        <th>P2</th>
+                        <th>P3</th>
+                        <th>P4</th>
+                        <th>P5</th>
+                        <th>P6</th>
+                        <th>P7</th>
+                        <th>P8</th>
+                        <th>P9</th>
+                        <th>P10</th>
+                        <th>P11</th>
+                        <th>P12</th>
+                        <th>Total</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody id="notas">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><input type="text" id="estudiante" size="30" /></td>
+                        <td><input type="text" id="p1" size="1" /></td>
+                        <td><input type="text" id="p2" size="1" /></td>
+                        <td><input type="text" id="p3" size="1" /></td>
+                        <td><input type="text" id="p4" size="1" /></td>
+                        <td><input type="text" id="p5" size="1" /></td>
+                        <td><input type="text" id="p6" size="1" /></td>
+                        <td><input type="text" id="p7" size="1" /></td>
+                        <td><input type="text" id="p8" size="1" /></td>
+                        <td><input type="text" id="p9" size="1" /></td>
+                        <td><input type="text" id="p10" size="1" /></td>
+                        <td><input type="text" id="p11" size="1" /></td>
+                        <td><input type="text" id="p12" size="1" /></td>
+                        <td colspan="2">
+                            <button type="button" onclick="agregarEstudiante();">Agregar</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="footer" class="container">
+            <footer>Página creada por Andrés Muñoz O.</footer>
+        </div>
+    </body>
+</html>

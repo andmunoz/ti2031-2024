@@ -1,4 +1,10 @@
-let notas = [];
+let notas = [
+    { estudiante: 'Jaime Núñez', puntajes: [1, 2, 3, 3, 2, 1, 0, 1, 2, 3, 2, 1] },
+    { estudiante: 'Daniela Pérez', puntajes: [1, 2, 3, 3, 2, 1, 1, 1, 2, 3, 2, 1] },
+    { estudiante: 'Marcela Zúñiga', puntajes: [1, 2, 3, 3, 2, 1, 3, 1, 2, 3, 2, 1] },
+    { estudiante: 'David Besnier', puntajes: [1, 2, 3, 3, 2, 1, 2, 1, 2, 3, 2, 1] },
+    { estudiante: 'Luis González', puntajes: [1, 2, 3, 2, 2, 1, 0, 1, 2, 3, 2, 1] },
+];
 
 function calcularNota(puntaje, maximo, exigencia) {
     let puntajeAprobacion = maximo * exigencia;
@@ -12,44 +18,6 @@ function calcularNota(puntaje, maximo, exigencia) {
     return Math.round(nota * 10) / 10;
 }
 
-function agregarEstudiante() {
-    let estudiante = document.getElementById('estudiante');
-    let p1 = document.getElementById('p1');
-    let p2 = document.getElementById('p2');
-    let p3 = document.getElementById('p3');
-    let p4 = document.getElementById('p4');
-    let p5 = document.getElementById('p5');
-    let p6 = document.getElementById('p6');
-    let p7 = document.getElementById('p7');
-    let p8 = document.getElementById('p8');
-    let p9 = document.getElementById('p9');
-    let p10 = document.getElementById('p10');
-    let p11 = document.getElementById('p11');
-    let p12 = document.getElementById('p12');
-
-    let registroNota = {
-        estudiante: estudiante.value, 
-        puntajes: []
-    }
-    registroNota.puntajes.push(parseFloat(p1.value));
-    registroNota.puntajes.push(parseFloat(p2.value));
-    registroNota.puntajes.push(parseFloat(p3.value));
-    registroNota.puntajes.push(parseFloat(p4.value));
-    registroNota.puntajes.push(parseFloat(p5.value));
-    registroNota.puntajes.push(parseFloat(p6.value));
-    registroNota.puntajes.push(parseFloat(p7.value));
-    registroNota.puntajes.push(parseFloat(p8.value));
-    registroNota.puntajes.push(parseFloat(p9.value));
-    registroNota.puntajes.push(parseFloat(p10.value));
-    registroNota.puntajes.push(parseFloat(p11.value));
-    registroNota.puntajes.push(parseFloat(p12.value));
-
-    notas.push(registroNota);
-    
-    actualizarTabla();
-    limpiarFormulario();
-}
-
 function actualizarTabla() {
     let body = document.getElementById('notas');
     body.innerHTML = '';
@@ -57,33 +25,65 @@ function actualizarTabla() {
     notas.forEach(function(item, index) {
         let total = 0;
         let htmlPuntajes = '';
+        let p = 1;
         for(let puntaje of item.puntajes) {
-            htmlPuntajes += '    <td>' + puntaje + '</td>';
+            htmlPuntajes += '    <td><input type="text" id="p' + p + '_' + (index + 1) + '" size="1" value="' + puntaje + '" /></td>';
             total += puntaje;
+            p++;
         }
         body.innerHTML += '<tr>' + 
-                          '    <td>' + (index + 1)+ '</td>' + 
+                          '    <td>' + (index + 1) + '</td>' + 
                           '    <td>' + item.estudiante + '</td>' + 
                           htmlPuntajes + 
                           '    <td>' + total + '</td>' + 
                           '    <td>' + calcularNota(total, 36, 0.6) + '</td>' + 
+                          '    <td>' + 
+                          '        <button type="button" onclick="actualizarEstudiante(' + index + ')"><i class="fas fa-pen"></i></button>' + 
+                          '        <button type="button" onclick="eliminarEstudiante(' + index + ')"><i class="fas fa-trash"></i></button>' + 
+                          '    </td>' + 
                           '</tr>';
     });
-    console.log(body.innerHTML);
 }
 
 function limpiarFormulario() {
     document.getElementById('estudiante').value = '';
-    document.getElementById('p1').value = '';
-    document.getElementById('p2').value = '';
-    document.getElementById('p3').value = '';
-    document.getElementById('p4').value = '';
-    document.getElementById('p5').value = '';
-    document.getElementById('p6').value = '';
-    document.getElementById('p7').value = '';
-    document.getElementById('p8').value = '';
-    document.getElementById('p9').value = '';
-    document.getElementById('p10').value = '';
-    document.getElementById('p11').value = '';
-    document.getElementById('p12').value = '';
+    for (let i = 1; i <= 12; i++) {
+        document.getElementById('p' + i).value = '';
+    }
+}
+
+function agregarEstudiante() {
+    let estudiante = document.getElementById('estudiante');
+
+    let registroNota = {
+        estudiante: estudiante.value, 
+        puntajes: []
+    }
+
+    for (let i = 1; i <= 12; i++) {
+        let p = document.getElementById('p' + i);
+        registroNota.puntajes.push(parseFloat(p.value));
+    }
+
+    notas.push(registroNota);
+    
+    actualizarTabla();
+    limpiarFormulario();
+}
+
+function eliminarEstudiante(index) {
+    notas.splice(index, 1);
+    actualizarTabla();
+}
+
+function actualizarEstudiante(index) {
+    let registroNota = notas[index];
+    registroNota.puntajes = [];
+
+    for (let i = 1; i <= 12; i++) {
+        let p = document.getElementById('p' + i + '_' + (index + 1));
+        registroNota.puntajes.push(parseFloat(p.value));
+    }
+
+    actualizarTabla();
 }

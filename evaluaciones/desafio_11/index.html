@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"/>
         <link rel="stylesheet" href="styles/styles.css" />
         <script src="scripts/scripts.js"></script>
     </head>
@@ -42,6 +43,7 @@
                         <th>P12</th>
                         <th>Total</th>
                         <th>Nota</th>
+                        <th>&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody id="notas">
@@ -61,8 +63,8 @@
                         <td><input type="text" id="p10" size="1" /></td>
                         <td><input type="text" id="p11" size="1" /></td>
                         <td><input type="text" id="p12" size="1" /></td>
-                        <td colspan="2">
-                            <button type="button" onclick="agregarEstudiante();">Agregar</button>
+                        <td colspan="3">
+                            <button type="button" onclick="agregarEstudiante();"><i class="fas fa-plus"></i></button>
                         </td>
                     </tr>
                 </tfoot>
@@ -71,5 +73,6 @@
         <div id="footer" class="container">
             <footer>Página creada por Andrés Muñoz O.</footer>
         </div>
+        <script>actualizarTabla();</script>
     </body>
 </html>

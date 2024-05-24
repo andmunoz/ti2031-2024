@@ -34,6 +34,11 @@ input, button {
     font-style: normal;
 }
 
+button:hover {
+    color: white;
+    background: #b82c34;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -55,6 +60,6 @@ th {
 }
 
 tr:hover {
-    background-color: #fff;
+    background-color: khaki;
     color: #000;
 }

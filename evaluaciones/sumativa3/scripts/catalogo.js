@@ -7,7 +7,7 @@ let catalogo = [
         ubicacion: 'Renca',
         imagen: 'p0001.png',
         disponibilidad: 10,
-        tiempo: 5
+        tiempo: 1
     },
     { 
         codigo: 'P0002', 
@@ -17,7 +17,7 @@ let catalogo = [
         ubicacion: 'Renca',
         imagen: 'p0002.jpg',
         disponibilidad: 10,
-        tiempo: 5
+        tiempo: 1
     },
     { 
         codigo: 'P0003', 
@@ -28,5 +28,15 @@ let catalogo = [
         imagen: 'p0003.jpg',
         disponibilidad: 3,
         tiempo: 5
+    },
+    { 
+        codigo: 'P0004', 
+        categoria: 'Juegos de Tablero',
+        nombre: 'Scythe',
+        descripcion: 'Ambientado en una realidad paralela de 1920, Scythe es un juego de estrategia tipo 4x para 1 a 5 jugadores (ampliado a 7 jugadores en la expansión “Invasores de tierras lejanas“).',
+        ubicacion: 'Renca',
+        imagen: 'p0004.png',
+        disponibilidad: 7,
+        tiempo: 3
     },
 ];

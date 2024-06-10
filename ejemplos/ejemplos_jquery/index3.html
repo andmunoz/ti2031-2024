@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo ocultar y mostrar un elemento con jQuery</title>
+</head>
+<body>
+  <div id="capa" style="padding: 10px; background-color: #ff8800;">Pon el ratón encima de esta capa</div><br>
+  <div id="mensaje" style="display: none;">Has puesto el ratón encima!! <br>(Ahora quítalo de la capa)</div>
+  <script 
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+    crossorigin="anonymous"></script>
+  <script>
+    $("#capa").mouseenter(function (evento) {
+      $("#mensaje").css("display", "block");
+    });
+    $("#capa").mouseleave(function (evento) {
+      $("#mensaje").css("display", "none");
+    });
+  </script>
+</body>
+</html>

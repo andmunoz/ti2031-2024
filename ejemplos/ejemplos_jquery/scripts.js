@@ -7,7 +7,15 @@ xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     // La respuesta viene en formato texto, por lo que tendremos que interpretarlo
     let pokemon = JSON.parse(this.responseText);
-    document.getElementById('results').innerHTML = pokemon.count + ' pokemones cargados...'
+    let results = document.getElementById('results');
+    let pokemones = '';
+    pokemones += '<p>' + pokemon.count + ' pokemones cargados...</p>';
+    pokemones += '<ol>';
+    for(let p of pokemon.results) {
+      pokemones += '<li>' + p.name + '</li>';
+    };
+    pokemones += '</ol>';
+    results.innerHTML = pokemones;
   }
 };
 

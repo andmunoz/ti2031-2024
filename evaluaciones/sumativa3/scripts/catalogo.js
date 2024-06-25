@@ -100,3 +100,29 @@ let catalogo = [
         tiempo: 3
     },
 ];
+
+function showCatalog(cols) {
+    let catalog = document.getElementById('catalog-content');
+    let html = '';
+    catalogo.forEach(function(item, key) {
+        if (key % cols == 0) {
+            html += '<div class="row">'
+        }
+        html += '    <div class="card-column">' +
+                '        <div class="card">' +
+                '            <img src="assets/' + item.imagen + '" alt="Avatar" class="card-img"/>' +
+                '            <div class="card-container">' +
+                '                <h4><b>' + item.nombre + '</b></h4>' +
+                '                <p>' + item.descripcion.substring(0, 100) + '...</p>' +
+                '                <p>Disponibles: ' + item.disponibilidad + '</p>' +
+                '                <p>Sede: ' + item.ubicacion + '</p>' +
+                '                <p><button onclick="' + (item.disponibilidad <= 0?'alert(\'Ya no hay stock de ' + item.nombre + '\');':'addToCart(' + key + ');') + '"><i class="fa fa-bookmark" aria-hidden="true"></i> Reservar</button></p>' +
+                '            </div>' +
+                '        </div>' +
+                '    </div>';
+        if (key % cols == cols - 1) {
+            html += '</div>';
+        }
+    });
+    catalog.innerHTML = html;
+}

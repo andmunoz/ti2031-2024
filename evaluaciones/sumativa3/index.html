@@ -6,9 +6,73 @@
         <title></title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Courgette&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles/estilos.css" />
+        <script src="scripts/login.js"></script>
         <script src="scripts/catalogo.js"></script>
+        <script src="scripts/carrito.js"></script>
     </head>
     <body>
+
+        <div id="top-bar" class="container">
+            <div id="login-form" style="display:block">
+                Ingresa tu nickname: 
+                <input type="text" id="nickname" size="20" />
+                <button class="form-button" onclick="login()"><i class="fa fa-power-off" aria-hidden="true"></i> Acceder</button>    
+            </div>
+            <div id="welcome-message" style="display:none">
+                ¡Bienvenido <span id="show-nickname"></span>! 
+                <button class="form-button" onclick="logout()"><i class="fa fa-power-off" aria-hidden="true"></i> Salir</button>
+            </div>
+        </div>
+
+        <div id="title" class="container">
+            <h1>
+                <img src="assets/dice.png" class="logo" alt="Logo Izquierdo" />
+                Ludoteca INACAPLudi
+                <img src="assets/dice.png" class="logo" alt="Logo Derecho" />
+            </h1>
+        </div>
+
+        <div class="container">
+            <div id="catalog-section" class="left-column-expanded">
+                <h2><i class="fa fa-list"></i> Catálogo</h2>
+                <div id="catalog-content"></div>
+            </div>
+            <div id="cart-collapsed" class="right-column-collapsed" style="display: block;">
+                <a href="#" onclick="showCart();"><h2><i class="fa fa-shopping-cart"></i> (<span id="cart-count"></span>)</h2></a>
+            </div>
+            <div id="cart" class="right-column" style="display: none;">
+                <a href="#" onclick="hideCart();"><h2><i class="fa fa-shopping-cart"></i> Carrito (<span id="cart-count-expanded"></span>)</h2></a>
+                <div class="cart-column">
+                    <div class="cart">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Sede</th>
+                                    <th>#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-content"></tbody>
+                        </table>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+
+        <div id="footer" class="container">
+            <footer>Creado por Andrés Muñoz O.</footer>
+        </div>
+
+        <script>
+            showCatalog(4);
+            showItemsInCart();
+            checkLogin();
+        </script>
+
     </body>
 </html>

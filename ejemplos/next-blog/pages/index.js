@@ -1,13 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Inter } from "next/font/google";
-import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ posts }) {
-  useEffect(() => {
-    console.log(posts);
-  }, [posts]);
   return (
     <main className={`flex flex-col items-center justify-between p-24 ${inter.className}`}>
       <h1>Todos los Artículos</h1>
@@ -17,7 +14,10 @@ export default function Home({ posts }) {
         posts.length > 0 &&
         posts.map((post) => {
           return (
-            <li>{ post.title } ({ post.author })</li>
+            <li>
+              <Link href={`/posts/${post.id}`}>{ post.title }</Link>
+              ({ post.author })
+            </li>
           )
         })
       }
@@ -25,7 +25,7 @@ export default function Home({ posts }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   console.log("Get Server Side Props Running");
   const res = await fetch("http://localhost:3000/api/posts");
   const posts = await res.json();

@@ -5,26 +5,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ posts }) {
   return (
-    <div className={`${inter.className}`}>
-      <div className="text-center font-mono text-3xl font-extrabold tracking-wider m-8">
-        Bienvenidos a mi Blog
-      </div>
+    <div className={`flex flex-col items-center justify-between p-24 ${inter.className}`}>
+      <h1>Administrador de Artículos</h1>
       <hr style={{ width: '100%' }} />
-      <div className="container">
       { 
         posts && 
         posts.length > 0 &&
         posts.map((post) => {
           return (
-            <p className="m-3">
+            <li>
               <Link href={`/posts/${post.id}`}>{ post.title }</Link>
               ({ post.author })
-            </p>
+            </li>
           )
         })
       }
-      </div>
-      <hr style={{ width: '100%' }} />
     </div>
   );
 }

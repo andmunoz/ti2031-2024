@@ -16,9 +16,11 @@ export default function Home({ posts }) {
         posts.length > 0 &&
         posts.map((post) => {
           return (
-            <p className="m-3">
-              <Link href={`/posts/${post.id}`}>{ post.title }</Link>
-              ({ post.author })
+            <p className="m-2">
+              <li>
+                <Link href={`/posts/${post.id}`}>{ post.title }</Link>
+                &nbsp;(autor: { post.author })
+              </li>
             </p>
           )
         })
@@ -30,9 +32,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  console.log("Get Server Side Props Running");
   const res = await fetch("http://localhost:3000/api/posts");
   const posts = await res.json();
-  console.log(posts);
   return { props: { posts } };
 }

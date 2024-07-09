@@ -12,8 +12,8 @@ export default async function handler(req, res) {
       res.status(404).json({ message: 'Post not found' });
     }
   } else if (req.method === 'PUT') {
-    const { title, content } = req.body;
-    await db.run('UPDATE posts SET title = ?, content = ? WHERE id = ?', [title, content, id]);
+    const { title, body, author } = req.body;
+    await db.run('UPDATE posts SET title = ?, body = ?, author = ? WHERE id = ?', [title, body, author, id]);
     res.status(200).json({ message: 'Post updated' });
   } else if (req.method === 'DELETE') {
     await db.run('DELETE FROM posts WHERE id = ?', [id]);

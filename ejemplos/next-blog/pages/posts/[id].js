@@ -5,14 +5,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Post({ post }) {
     return (
-    <main className={`flex flex-col items-center justify-between p-24 ${inter.className}`}>
-      <h1>Título: { post.title }</h1>
-      <hr style={{ width: '100%' }} />
-      <p>{ post.body }</p>
-      <p>Autor: { post.author }</p>
-    </main>
-  );
-}
+      <div className={`${inter.className}`}>
+        <div className="text-center font-mono text-3xl font-extrabold tracking-wider m-8">
+          Bienvenidos a mi Blog
+        </div>
+        <hr style={{ width: '100%' }} />
+        <div className="container">
+          <p className="m-2">Título: {post.title}</p>
+          <p className="m-2">{post.body}</p>
+          <p className="m-2">Autor: {post.author}</p>
+        </div>
+        <hr style={{ width: '100%' }} />
+      </div>
+    );
+  }
 
 export async function getStaticPaths() {
     const res = await fetch('http://localhost:3000/api/posts');
@@ -26,9 +32,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log("Get Server Side Props Running");
   const res = await fetch(`http://localhost:3000/api/posts/${params.id}`);
   const post = await res.json();
-  console.log(post);
   return { props: { post } };
 }
